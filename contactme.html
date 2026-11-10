@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Me</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+  <div class="container nav">
+    <div class="logo">Repka Jan</div>
+    <nav>
+       <a href="index.html" class="active">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="#faq">FAQ</a>
+        <a href="services.html">Services</a>
+        <a href="About.html">About</a>
+        <a href="contactme.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="contact">
+  <div class="container">
+    <h2>Contact Me</h2>
+
+    <div class="form-container">
+      <form id="contactForm" class="form">
+
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" required placeholder="Your name">
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" required placeholder="you@email.com">
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" rows="6" required placeholder="Your message"></textarea>
+        </div>
+
+        <button type="submit" class="sendMessage-btn">Send Message</button>
+
+      </form>
+    </div>
+
+    <div id="confirmation" style="display:none; text-align:center; margin-top:20px; color:#64ffda;">
+      Message sent successfully.
+    </div>
+
+  </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+<script>
+  emailjs.init("xmaFybEvf-6GhoTQm");
+</script>
+
+<script src="script.js"></script>
+
+</body>
+</html>
